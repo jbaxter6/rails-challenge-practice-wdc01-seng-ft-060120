@@ -1,7 +1,14 @@
 <h1> <%= @company.name %> </h1>
 <h3> All Employees </h3>
-<ul>
-    <% @company.employees.each do |employee| %>
-        <li> <%= link_to employee.name, employee_path(employee) %> </li>
-    <% end %>
-</ul>
+    <ul>
+        <% @company.employees.each do |employee| %>
+            <li> <%= link_to employee.name, employee_path(employee) %> </li>
+        <% end %>
+    </ul>
+<h3>Building where company is located</h3>
+    <ul>
+        <li><%=@company.building_names%>
+        <%@company.of%></li>
+    </ul>
+<%=link_to 'Add Employee', new_employee_path%>
+<%=link_to 'Back', companies_path%>

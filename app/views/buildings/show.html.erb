@@ -3,11 +3,13 @@
 <h4> Building directory </h4>
 <ul>
     <% @building.companies.each do |company| %>
-        <li> <%= company.name %> <%= @building.company_floors(company) %> </li>
+        <li> <%= company.name %> </li>
     <% end %>
 </ul>
 <h4> Total Rent Paid </h4>
 <%= number_to_currency(@building.total_rent, :unit => "$") %>
 
-
+<div>
+<%= link_to 'Update', edit_building_path%>
 <%= link_to 'back', buildings_path%>
+</div>
