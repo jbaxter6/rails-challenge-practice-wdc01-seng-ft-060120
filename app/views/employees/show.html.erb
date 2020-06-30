@@ -1,3 +1,4 @@
 <h1> <%= @employee.name %> </h1>
+<h3> <%= @employee.title %> at <%=@employee.company.name%> </h3>
 
-
+<%= link_to 'back', employees_path%>

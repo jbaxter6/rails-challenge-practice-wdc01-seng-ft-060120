@@ -10,9 +10,11 @@ class CompaniesController < ApplicationController
     end
   
     def new
+        @company = Company.new
     end
   
     def create
+        @company = Company.create(company_params)
     end
   
     def edit
@@ -21,7 +23,9 @@ class CompaniesController < ApplicationController
     def update
     end
   
-    def delete
+    def destroy
+        @building.destroy
+        redirect_to companies_path
     end
 
     private

@@ -1,3 +1,13 @@
+<%= form_for @employee do |f| %>
+	<ul>
+		<% if @employee.errors.any? %>
+			<%= @employee.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		<% end %>
+	</ul>
+    <%end%>
+
 <%= form_for @employee do |f| %> 
 <%= f.label :name, "Enter your name" %>
 <%= f.text_field :name %> <br>

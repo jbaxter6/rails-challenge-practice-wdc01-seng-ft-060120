@@ -2,6 +2,6 @@
 <p>Find me in app/views/buildings/index.html.erb</p>
 <ul>
     <% @buildings.each do |building| %>
-    <li> <%= link_to building.name, building_path(building) %> </li>
+    <li> <%= link_to building.name, building_path(building) %> Available Floors: <%=building.number_of_floors_available.join(", ")%> </li>
     <% end %>
 </ul>
