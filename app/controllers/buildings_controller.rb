@@ -1,6 +1,6 @@
 class BuildingsController < ApplicationController
 
-    before_action :find_building, only: [:show, :update]
+    before_action :find_building, only: [:show, :update, :edit, :update, :destroy]
 
     def index
         @buildings = Building.all

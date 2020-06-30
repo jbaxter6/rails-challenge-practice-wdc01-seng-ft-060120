@@ -1,0 +1,6 @@
+<h1> What company would you like to know more about?</h1>
+<ul>
+    <% @companies.each do |company| %>
+        <li> <%= link_to company.name, companies_path(company) %> </li>
+    <% end %>
+</ul>
