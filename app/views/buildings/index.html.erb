@@ -1,0 +1,7 @@
+<h1>Heres all of the Buildings</h1>
+<p>Find me in app/views/buildings/index.html.erb</p>
+<ul>
+    <% @buildings.each do |building| %>
+    <li> <%= link_to building.name, building_path(building) %> </li>
+    <% end %>
+</ul>
